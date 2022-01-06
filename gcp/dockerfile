@@ -1,0 +1,5 @@
+FROM nginx:latest
+
+MAINTAINER Sebastian Langhi "sebastian.langhi@globant.com"
+
+COPY ./site-content/index.html /usr/share/nginx/html/

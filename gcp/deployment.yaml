@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skydropx-gke-deployment
+spec:
+  selector:
+    matchLabels:
+      name: skydropx-gke-deployment
+  template:
+    metadata:
+      labels:
+        name: skydropx-gke-deployment
+    spec:
+      containers:
+        - name: app
+          image: nginx:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
